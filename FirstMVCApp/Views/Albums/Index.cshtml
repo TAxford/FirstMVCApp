@@ -1,32 +1,33 @@
-﻿@model IEnumerable<FirstMVCApp.Models.Album>
+﻿<body class="AlbumBody">
+    @model IEnumerable<FirstMVCApp.Models.Album>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Albums</h2>
-
-<p>
-    @Html.ActionLink("Add New Album", "Create")
-</p>
-
-
-<div class="row">
-    @foreach (var item in Model)
-    {
-    <div class="col-md-4">
-        <h2>@Html.DisplayNameFor(model => model.Photo)</h2>
-        <img class="AlbumPhoto" src="@Html.DisplayFor(modelItem => item.Photo)" />
-        <h3> @Html.DisplayNameFor(model => model.AlbumName) : @Html.DisplayFor(modelItem => item.AlbumName)</h3>
-        <p>@Html.DisplayNameFor(model => model.TrackAmount) : @Html.DisplayFor(modelItem => item.TrackAmount)</p>
-        <p>@Html.DisplayNameFor(model => model.WonGrammy) : @Html.DisplayFor(modelItem => item.WonGrammy)</p>
-        <p>@Html.DisplayFor(modelItem => item.YearReleased) : @Html.DisplayFor(modelItem => item.YearReleased)</p>
-        <p>@Html.ActionLink("Edit", "Edit", new { id = item.AlbumID }) : @Html.ActionLink("Details", "Details", new { id = item.AlbumID }) : @Html.ActionLink("Delete", "Delete", new { id = item.AlbumID })</p>
-    </div>
-
+    @{
+        ViewBag.Title = "Index";
     }
-    </div>
 
+    <h2>Albums</h2>
+
+    <p>
+        @Html.ActionLink("Add New Album", "Create")
+    </p>
+
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <h2>@Html.DisplayNameFor(model => model.Photo)</h2>
+                <img class="AlbumPhoto" src="@Html.DisplayFor(modelItem => item.Photo)" />
+                <h3> @Html.DisplayNameFor(model => model.AlbumName) : @Html.DisplayFor(modelItem => item.AlbumName)</h3>
+                <p>@Html.DisplayNameFor(model => model.TrackAmount) : @Html.DisplayFor(modelItem => item.TrackAmount)</p>
+                <p>@Html.DisplayNameFor(model => model.WonGrammy) : @Html.DisplayFor(modelItem => item.WonGrammy)</p>
+                <p>@Html.DisplayFor(modelItem => item.YearReleased) : @Html.DisplayFor(modelItem => item.YearReleased)</p>
+                <p>@Html.ActionLink("Edit", "Edit", new { id = item.AlbumID }) : @Html.ActionLink("Details", "Details", new { id = item.AlbumID }) : @Html.ActionLink("Delete", "Delete", new { id = item.AlbumID })</p>
+            </div>
+
+        }
+    </div>
+</body>
 
 
 

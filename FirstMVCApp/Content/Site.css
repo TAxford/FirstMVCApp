@@ -33,3 +33,45 @@ img.AlbumPhoto {
         height: 300px;
         width: 300px;
     }
+
+/*Artist Page*/
+body.ArtistBody {
+    background-image: url('images/MWBR.jpg');
+}
+
+h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:snow;
+    font-weight:bold;    
+}
+
+a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: snow;
+    font-weight: bold;
+}
+
+a:hover{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:red;
+    background-color:black;
+    font-weight: bold;
+}
+
+/*Album Page*/
+body.AlbumBody {
+    background-image: url('images/VRBR.jpg');
+    background-size:cover;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: snow;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: snow;
+    font-weight: bold;
+}

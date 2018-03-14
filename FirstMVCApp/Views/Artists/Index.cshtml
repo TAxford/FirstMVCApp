@@ -1,17 +1,18 @@
-﻿@model IEnumerable<FirstMVCApp.Models.Artist>
+﻿<body class="ArtistBody">
+    @model IEnumerable<FirstMVCApp.Models.Artist>
 
-@{
-    ViewBag.Title = "Index";
-}
+    @{
+        ViewBag.Title = "Index";
+    }
 
-<h2>Artist</h2>
+    <h2>Artist</h2>
 
-<p>
-    @Html.ActionLink("Add New Artist", "Create")
-</p>
+    <p>
+        @Html.ActionLink("Add New Artist", "Create")
+    </p>
 
-<div class="row">
-    
+    <div class="row">
+
         @foreach (var item in Model)
         {
             <div class="col-md-4">
@@ -23,5 +24,6 @@
 
         }
 
-    
-</div>
+
+    </div>
+</body>
