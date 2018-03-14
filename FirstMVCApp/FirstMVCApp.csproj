@@ -150,15 +150,29 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Album.cs">
+      <DependentUpon>FirstMVCAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Artist.cs">
+      <DependentUpon>FirstMVCAppModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\FirstMVCAppModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FirstMVCAppModel.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\FirstMVCAppModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FirstMVCAppModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\FirstMVCAppModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FirstMVCAppModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>FirstMVCAppModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -185,6 +199,12 @@
     <Content Include="Models\FirstMVCAppModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FirstMVCAppModel.Context.cs</LastGenOutput>
+      <DependentUpon>FirstMVCAppModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\FirstMVCAppModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FirstMVCAppModel.edmx</DependentUpon>
+      <LastGenOutput>FirstMVCAppModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -192,9 +212,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FirstMVCAppModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\FirstMVCAppModel.edmx.diagram">
+    <Content Include="Models\FirstMVCAppModel.edmx.diagram">
       <DependentUpon>FirstMVCAppModel.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
