@@ -16,7 +16,7 @@ namespace FirstMVCApp.Models
     {
         public int ArtistID { get; set; }
         public int AlbumID { get; set; }
-        public int ArtistName { get; set; }
+        public string ArtistName { get; set; }
     
         public virtual Album Album { get; set; }
     }

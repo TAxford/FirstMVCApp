@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="196a73de53194bbd83ee54347096d426" Name="Diagram1">
-        <EntityTypeShape EntityType="FirstMVCAppModel.Album" Width="1.5" PointX="6.375" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FirstMVCAppModel.Artist" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FirstMVCAppModel.sysdiagram" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+      <Diagram DiagramId="9df5025ba6004593b29da8ad7ad56e59" Name="Diagram1">
+        <EntityTypeShape EntityType="FirstMVCAppModel.Album" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FirstMVCAppModel.Artist" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FirstMVCAppModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="FirstMVCAppModel.FK_Artist_Album" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

@@ -21,6 +21,7 @@ namespace FirstMVCApp.Models
         }
     
         public int AlbumID { get; set; }
+        public string Photo { get; set; }
         public string AlbumName { get; set; }
         public string TrackAmount { get; set; }
         public bool WonGrammy { get; set; }

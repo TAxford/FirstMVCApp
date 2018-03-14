@@ -13,10 +13,10 @@ namespace FirstMVCApp.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FirstMVCAppEntities : DbContext
+    public partial class FirstMVCAppEntities1 : DbContext
     {
-        public FirstMVCAppEntities()
-            : base("name=FirstMVCAppEntities")
+        public FirstMVCAppEntities1()
+            : base("name=FirstMVCAppEntities1")
         {
         }
     

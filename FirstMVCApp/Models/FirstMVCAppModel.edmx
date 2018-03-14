@@ -10,10 +10,11 @@
             <PropertyRef Name="AlbumID" />
           </Key>
           <Property Name="AlbumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="AlbumName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TrackAmount" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="WonGrammy" Type="bit" Nullable="false" />
-          <Property Name="YearReleased" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="YearReleased" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="Artist">
           <Key>
@@ -21,7 +22,7 @@
           </Key>
           <Property Name="ArtistID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AlbumID" Type="int" Nullable="false" />
-          <Property Name="ArtistName" Type="int" Nullable="false" />
+          <Property Name="ArtistName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -64,10 +65,11 @@
             <PropertyRef Name="AlbumID" />
           </Key>
           <Property Name="AlbumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="AlbumName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TrackAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="WonGrammy" Type="Boolean" Nullable="false" />
-          <Property Name="YearReleased" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="YearReleased" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Artists" Relationship="Self.FK_Artist_Album" FromRole="Album" ToRole="Artist" />
         </EntityType>
         <EntityType Name="Artist">
@@ -76,7 +78,7 @@
           </Key>
           <Property Name="ArtistID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AlbumID" Type="Int32" Nullable="false" />
-          <Property Name="ArtistName" Type="Int32" Nullable="false" />
+          <Property Name="ArtistName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Album" Relationship="Self.FK_Artist_Album" FromRole="Artist" ToRole="Album" />
         </EntityType>
         <EntityType Name="sysdiagram">
@@ -101,7 +103,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="FirstMVCAppEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="FirstMVCAppEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Albums" EntityType="Self.Album" />
           <EntitySet Name="Artists" EntityType="Self.Artist" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
@@ -115,11 +117,12 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FirstMVCAppModelStoreContainer" CdmEntityContainer="FirstMVCAppEntities">
+        <EntityContainerMapping StorageEntityContainer="FirstMVCAppModelStoreContainer" CdmEntityContainer="FirstMVCAppEntities1">
           <EntitySetMapping Name="Albums">
             <EntityTypeMapping TypeName="FirstMVCAppModel.Album">
               <MappingFragment StoreEntitySet="Album">
                 <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
                 <ScalarProperty Name="TrackAmount" ColumnName="TrackAmount" />
                 <ScalarProperty Name="WonGrammy" ColumnName="WonGrammy" />
