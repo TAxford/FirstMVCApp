@@ -11,7 +11,8 @@ namespace FirstMVCApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Album
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +22,15 @@ namespace FirstMVCApp.Models
         }
     
         public int AlbumID { get; set; }
+        [Display(Name = "Album")]
         public string Photo { get; set; }
+        [Display(Name="Title")]
         public string AlbumName { get; set; }
+        [Display(Name ="# of Tracks")]
         public string TrackAmount { get; set; }
+        [Display(Name = "Grammy")]
         public bool WonGrammy { get; set; }
+        [Display(Name ="Release Date")]
         public string YearReleased { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

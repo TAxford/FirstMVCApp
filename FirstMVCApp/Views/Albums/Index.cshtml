@@ -4,54 +4,49 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Albums</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Album", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Photo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AlbumName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TrackAmount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WonGrammy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.YearReleased)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            <img class="AlbumPhoto" src="@Html.DisplayFor(modelItem => item.Photo)" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AlbumName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TrackAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WonGrammy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.YearReleased)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AlbumID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AlbumID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AlbumID })
-        </td>
-    </tr>
-}
 
-</table>
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-md-4">
+        <h2>@Html.DisplayNameFor(model => model.Photo)</h2>
+        <img class="AlbumPhoto" src="@Html.DisplayFor(modelItem => item.Photo)" />
+        <h3> @Html.DisplayNameFor(model => model.AlbumName) : @Html.DisplayFor(modelItem => item.AlbumName)</h3>
+        <p>@Html.DisplayNameFor(model => model.TrackAmount) : @Html.DisplayFor(modelItem => item.TrackAmount)</p>
+        <p>@Html.DisplayNameFor(model => model.WonGrammy) : @Html.DisplayFor(modelItem => item.WonGrammy)</p>
+        <p>@Html.DisplayFor(modelItem => item.YearReleased) : @Html.DisplayFor(modelItem => item.YearReleased)</p>
+        <p>@Html.ActionLink("Edit", "Edit", new { id = item.AlbumID }) : @Html.ActionLink("Details", "Details", new { id = item.AlbumID }) : @Html.ActionLink("Delete", "Delete", new { id = item.AlbumID })</p>
+    </div>
+
+    }
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

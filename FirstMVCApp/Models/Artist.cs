@@ -11,11 +11,13 @@ namespace FirstMVCApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Artist
     {
         public int ArtistID { get; set; }
         public int AlbumID { get; set; }
+        [Display(Name ="Artist")]
         public string ArtistName { get; set; }
     
         public virtual Album Album { get; set; }

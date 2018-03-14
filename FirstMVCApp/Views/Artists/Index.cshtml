@@ -4,36 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Artist</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Artist", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ArtistName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Album.Photo)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ArtistName)
-        </td>
-        <td>
-            <img class="AlbumPhoto" src="@Html.DisplayFor(modelItem => item.Album.Photo)" />
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ArtistID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ArtistID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ArtistID })
-        </td>
-    </tr>
-}
+<div class="row">
+    
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <h2>@Html.DisplayFor(modelItem => item.ArtistName)</h2>
+                <img class="AlbumPhoto" src="@Html.DisplayFor(modelItem => item.Album.Photo)" />
+                <p>@Html.ActionLink("Edit", "Edit", new { id = item.AlbumID }) : @Html.ActionLink("Details", "Details", new { id = item.AlbumID }) : @Html.ActionLink("Delete", "Delete", new { id = item.AlbumID })</p>
 
-</table>
+            </div>
+
+        }
+
+    
+</div>
