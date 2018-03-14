@@ -22,3 +22,14 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Photo Resize*/
+img.AlbumPhoto {
+    height: 100px;
+    width: 100px;
+}
+
+    img.AlbumPhoto:hover {
+        height: 300px;
+        width: 300px;
+    }

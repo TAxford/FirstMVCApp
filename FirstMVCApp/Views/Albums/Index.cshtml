@@ -32,7 +32,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Photo)
+            <img class="AlbumPhoto" src="@Html.DisplayFor(modelItem => item.Photo)" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AlbumName)

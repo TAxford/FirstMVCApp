@@ -183,6 +183,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\DBPF.jpg" />
+    <Content Include="Content\images\EMDMMM.jpg" />
+    <Content Include="Content\images\SLCMM.jpg" />
+    <Content Include="Content\images\TWPF.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
