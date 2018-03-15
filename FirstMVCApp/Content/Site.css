@@ -23,6 +23,25 @@ textarea {
     max-width: 280px;
 }
 
+/*NavagationBar Edit*/
+.navbar.navbar-inverse.navbar-fixed-top{
+    background-color:darkslategray;
+    color:snow;
+}
+
+.navbar-brand{
+    font-size:30px;
+} 
+
+a {
+    color: snow !important;
+}
+
+a:hover {
+    color: red !important;
+    background-color:black!important;
+}
+
 /*Photo Resize*/
 img.AlbumPhoto {
     height: 100px;
@@ -41,7 +60,7 @@ body.ArtistBody {
 
 h2{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:snow;
+    color:red;
     font-weight:bold;    
 }
 
@@ -66,12 +85,98 @@ body.AlbumBody {
 
 h3 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: snow;
+    color: red;
     font-weight: bold;
 }
 
 p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+/*Details Page*/
+body.AlbumDetails {
+    background-image: url('images/EDB.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+h2.Details {
+    padding-left: 460px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+h3.Details {
+    padding-left: 550px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+p.Details {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-weight: bold;
+    padding-left:550px;
+}
+
+footer p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-weight: bold;
+    padding-left: 500px;
+}
+
+p.DetailsAction a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    font-weight: bold;
+    
+}
+
+p.DetailsAction a:hover {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    background-color:red;
+    font-weight: bold;
+}
+
+img.DetailPhoto {
+    padding-left: 450px;
+}
+
+/*Home Page*/
+body.Home {
+    display:flex;
+    justify-content:center;
+    background-image: url('images/FHB.jpg');
+    background-size:cover;
+}
+
+h1.Home {
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: snow;
     font-weight: bold;
+    font-size:100px;
+}
+
+p.Home {
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: snow;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*Artist Details Page*/
+body.ArtistsDBody {
+    background-image: url('images/LADB.jpg');
+    background-size:cover;
 }

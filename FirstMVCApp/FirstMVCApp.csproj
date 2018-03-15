@@ -184,7 +184,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\DBPF.jpg" />
+    <Content Include="Content\images\EDB.jpg" />
     <Content Include="Content\images\EMDMMM.jpg" />
+    <Content Include="Content\images\FHB.jpg" />
+    <Content Include="Content\images\LADB.jpg" />
     <Content Include="Content\images\MWBR.jpg" />
     <Content Include="Content\images\SLCMM.jpg" />
     <Content Include="Content\images\TWPF.jpg" />
